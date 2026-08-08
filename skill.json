@@ -1,0 +1,37 @@
+{
+  "name": "genpark-llm-api-cost-model-selector-optimizer-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Intelligent LLM API cost analyzer, model tier selector & monthly spend optimizer.",
+  "author": "genpark",
+  "category": "operations",
+  "tags": [
+    "llm-cost-optimizer",
+    "model-selector",
+    "api-spend",
+    "ai-infrastructure"
+  ],
+  "inputs": {
+    "monthly_token_volume": {
+      "type": "integer"
+    },
+    "task_complexity": {
+      "type": "string"
+    },
+    "latency_requirement_ms": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "recommended_model_tier": {
+      "type": "string"
+    },
+    "estimated_monthly_cost_usd": {
+      "type": "number"
+    },
+    "savings_vs_current_usd": {
+      "type": "number"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
